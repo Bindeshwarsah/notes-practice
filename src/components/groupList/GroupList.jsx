@@ -88,103 +88,7 @@
 
 
 
-
-// import React, { useState } from "react";
-// import { toast, ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
-// import Popup from "../groupPopup/Popup";
-// import styles from "./GroupList.module.css";
-// import GroupTitle from "../groupTitle/GroupTitle";
-
-// const generateUniqueId = () => {
-//   return "_" + Math.random().toString(36).substr(2, 9);
-// };
-
-// const GroupList = ({ setActiveGroup, activeGroup, handleGroupClick }) => {
-//   const [activeIndex, setActiveIndex] = useState(null);
-//   const [isPopupOpen, setPopupOpen] = useState(false);
-//   const [groups, setGroups] = useState(
-//     JSON.parse(localStorage.getItem("groups")) || []
-//   );
-
-//   const handleOpenPopup = () => {
-//     setPopupOpen(true);
-//   };
-
-//   const handleClosePopup = () => {
-//     setPopupOpen(false);
-//   };
-
-//   const handleGroupCreate = (newGroup) => {
-//     const isGroupExist = groups.some(
-//       (group) => group.name === newGroup.name && group.color !== newGroup.color
-//     );
-    
-
-//     if (isGroupExist) {
-//       toast.warning("Group with the same name already exists. Please choose a different name.");
-//       return;
-//     }
-//     const groupId = generateUniqueId();
-//     const updatedGroups = [...groups, { ...newGroup, id: groupId }];
-//     setGroups(updatedGroups);
-    
-//     // Ensure that initial and groupName are present in newGroup
-//     const { initial, groupName } = newGroup;
-  
-//     // Store groupInfo in localStorage
-//     localStorage.setItem(`groupInfo_${groupId}`, JSON.stringify({ initial, groupName }));
-  
-//     localStorage.setItem("groups", JSON.stringify(updatedGroups));
-//   };
-  
-
-//   return (
-//     <div className={styles.groupListContainer}>
-//       <div className={styles.groupList}>
-//         <div>
-//           <h2 className={styles.heading}>Pocket Notes</h2>
-//         </div>
-//         <ul className={styles.listItem}>
-//           {groups.map((group, index) => (
-//             <GroupTitle
-//               key={index}
-//               group={group}
-//               isActive={index === activeIndex || group.id === activeGroup?.id}
-//               onClick={() => {
-//                 setActiveIndex(index);
-//                 handleGroupClick(group, index);
-//               }}
-//             />
-//           ))}
-//         </ul>
-//       </div>
-//       <div onClick={handleOpenPopup} className={styles.popupBtn}>
-//         +
-//       </div>
-//       {isPopupOpen && (
-//         <Popup
-//           isOpen={isPopupOpen}
-//           onClose={handleClosePopup}
-//           onGroupCreate={handleGroupCreate}
-//         />
-//       )}
-//       <ToastContainer />
-//     </div>
-//   );
-// };
-
-// export default GroupList;
-
-
-
-
-
-
-
-
-
-
+// its working fine.....
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -268,23 +172,6 @@ const GroupList = ({ setActiveGroup, activeGroup, handleGroupClick }) => {
 };
 
 export default GroupList;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

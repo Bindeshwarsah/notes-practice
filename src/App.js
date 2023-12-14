@@ -54,21 +54,6 @@ const App = () => {
   // State to track whether the view should be mobile or not
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 500);
 
-  // Function to update isMobileView state based on window width
-  // const updateIsMobileView = () => {
-  //   setIsMobileView(window.innerWidth <= 500);
-  // };
-
-  // useEffect(() => {
-  //   // Add event listener to update isMobileView on window resize
-  //   window.addEventListener('resize', updateIsMobileView);
-
-  //   // Clean up the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener('resize', updateIsMobileView);
-  //   };
-  // }, []); // Empty dependency array to run the effect only once
-
   useEffect(() => {
     // Add event listener to update isMobileView on window resize
     const handleResize = () => {

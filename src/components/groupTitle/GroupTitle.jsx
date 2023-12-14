@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./GroupTitle.module.css";
 
 const GroupTitle = ({ group, isActive, onClick }) => {
-  if (!group) {
+  if (!group || !group.name) {
     return null;
   }
 
