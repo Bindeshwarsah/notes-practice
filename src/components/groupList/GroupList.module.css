@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.groupListContainer {
+  /* width: 65vh; */
+  width: 30vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 100vh;
+  background-color: #FFF;
+  position: relative;
+}
+
+.heading {
+  position: fixed;
+  top: 0rem;
+  background-color: #FFF;
+  /* width: 59.1vh; */
+  width: 28.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  padding: 2rem 0rem 1rem 0rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.04375rem;
+}
+.popupBtn {
+  position: fixed;
+  left: 20vw;
+  /* left: 17.5rem; */
+  bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  background-color: #16008b;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 97.688%; /* 4.27381rem */
+  letter-spacing: 0.0875rem;
+  cursor: pointer;
+}
+.listItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: center; */
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0%;
+}
+
+@media screen and (max-width:500px) {
+  .groupListContainer {
+    width: 100vw;
+  }
+  .heading {
+    width: 100%;
+    /* background-color: aqua; */
+    padding-bottom: 0.5rem;
+  }
+  .popupBtn {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 3.5rem;
+    font-size: 3rem;
+    left: 78vw;
+  }
+  .listItem {
+    gap: 1.3rem;
+  }
+  
+}
