@@ -3,7 +3,6 @@
   box-sizing: border-box;
 }
 .groupListContainer {
-  /* width: 65vh; */
   width: 30vw;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -17,7 +16,6 @@
   position: fixed;
   top: 0rem;
   background-color: #FFF;
-  /* width: 59.1vh; */
   width: 28.5vw;
   display: flex;
   justify-content: center;
@@ -34,7 +32,6 @@
 .popupBtn {
   position: fixed;
   left: 20vw;
-  /* left: 17.5rem; */
   bottom: 1.5rem;
   display: flex;
   justify-content: center;
@@ -48,7 +45,7 @@
   font-size: 3.5rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 97.688%; /* 4.27381rem */
+  line-height: 97.688%; 
   letter-spacing: 0.0875rem;
   cursor: pointer;
 }
@@ -56,11 +53,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: center; */
   list-style: none;
   gap: 1.7rem;
   padding: 0%;
-  padding-bottom: 2rem;
 }
 
 @media screen and (max-width:500px) {
@@ -69,7 +64,6 @@
   }
   .heading {
     width: 100%;
-    /* background-color: aqua; */
     padding-bottom: 0.5rem;
   }
   .popupBtn {
@@ -81,7 +75,6 @@
   }
   .listItem {
     gap: 1.3rem;
-    padding-bottom: 1rem;
   }
   
 }

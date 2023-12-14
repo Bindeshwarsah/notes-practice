@@ -15,9 +15,19 @@ const NotesInput = ({ onSendMessage }) => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      sendMessage();
+    if (e.key === "Enter") {
+      // Check if the screen width is less than or equal to 500px
+      const isMobile = window.innerWidth <= 500;
+
+      if (isMobile) {
+        // For mobile devices, prevent the default Enter behavior (new line) and insert a line break
+        e.preventDefault();
+        setMessageInput((prevMessage) => prevMessage + "\n");
+      } else if (!e.shiftKey) {
+        // For non-mobile devices, or mobile devices with Shift key pressed, trigger the send message action
+        e.preventDefault();
+        sendMessage();
+      }
     }
   };
 
