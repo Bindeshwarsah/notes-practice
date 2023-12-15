@@ -100,7 +100,7 @@ import GroupTitle from '../groupTitle/GroupTitle';
 import NotesDisplay from '../notesDisplay/NotesDisplay';
 import NotesInput from '../notesInput/NotesInput';
 import backLogo from '../../assets/icons/backLogo.svg';
-import { formatMessageTimestamp } from '../../helpers/helper';
+// import { formatMessageTimestamp } from '../../helpers/helper';
 
 
 const generateInitial = (groupName) => {
@@ -192,7 +192,7 @@ const NotesContent = () => {
       <NotesDisplay
         messages={messages.map((message) => ({
           ...message,
-          timestamp: formatMessageTimestamp(message.timestamp),
+          timestamp: (message.timestamp),
         }))}
       />
       <NotesInput onSendMessage={onSendMessage} />
